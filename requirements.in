@@ -1,0 +1,50 @@
+python-dotenv==0.20.0
+albumentations==1.3.0
+black==22.3.0
+clean-fid==0.1.23
+click==8.0.4
+einops==0.6.1
+h5py==3.8.0
+hydra-core==1.1.2
+hydra_colorlog
+inputimeout==1.0.4
+ipython==8.5.0
+ipywidgets==8.0.2
+jsonlines==3.1.0
+kornia==0.6.6
+matplotlib==3.6.1
+moviepy==1.0.3
+networkx==2.5.1
+ninja==1.11.1
+omegaconf==2.1.2
+opencv-contrib-python==4.7.0.72
+opencv-python==4.7.0.72
+opencv-python-headless==4.7.0.72
+# packaging 21.3 is too old for modern setuptools, which calls
+# packaging.version.canonicalize_version(strip_trailing_zero=...)
+# Bump to avoid build-time errors when installing detectron2 without
+# build isolation (or from source) on macOS/Linux.
+packaging>=24.0
+pandas
+performer-pytorch==1.1.4
+Pillow==8.4.0
+pycocotools==2.0.6
+pytest==7.0.1
+pytorch-lightning==1.9.0
+pytz==2022.1
+reformer-pytorch==1.4.4
+requests==2.25.1
+rich==12.3.0
+scikit-learn==1.1.2
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@6fdee8f2727f4506cfbbe553e23b895e27956588
+sh==1.14.2
+slot-attention==1.1.1
+submitit==1.4.2
+timm==0.6.11
+torchmetrics==0.8.1
+svgwrite==1.1.6
+numba
+POT
+streamlit
+wandb==0.13.3
+numpy<2

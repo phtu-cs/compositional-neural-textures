@@ -1,0 +1,14 @@
+_target_: src.models.components.layout_splat.splat_blob_layer_tree_module
+hparams:
+  aux_layers:
+  - -1
+  splat_func:
+    _target_: src.models.components.layout_splat.splat_blob_tree_module_occluded_flexible
+    hparams:
+      cutoff: 3
+      img_size: 256
+      num_levels: 1
+      hidden_dim: 384
+      texton_encoder: disentangled_local_texton
+      merged_feature_grid: false
+      use_covs_feature: false

@@ -1,0 +1,9 @@
+_target_: src.models.components.generator.FullyConvolutionalSPADEGeneratorModule
+hparams:
+  n_embedding: 384
+  feature_map_size_ratios:
+    - 0.25
+    - 0.5
+    - 1
+    - 1
+  nonbase_layers: {}

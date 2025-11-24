@@ -1,0 +1,40 @@
+_target_: src.models.components.layout_net.MaskFormer
+hparams:
+  config_file: src/models/components/Mask2Former/configs/coco/panoptic-segmentation/maskformer2_R50_bs16_50ep_our.yaml
+  opts: ''
+  use_gumbel_sample: true
+  use_bg: false
+  compute_blob_weight: pred_logit_modulation_gumbel
+  use_point_sampled_features: false
+  shrink_covs: false
+  encoder: disentangled_local_texton
+  min_tau: 1
+  max_tau: 1
+  max_step_tau: 320000
+  num_levels: 1
+  num_queries: 100
+  blob_feature_dim: 384
+  bg_feature_dim: 8
+  max_blob_shift: 1
+  max_shift_covs_scale: 2
+  max_covs_scale: 1
+  min_covs_scale: 0.1
+  use_shifted_blob_sp_params: true
+  use_bd_thred: true
+  bd_thred:
+    max: 0.6
+    delayed_step: 1
+    max_step: 2
+  use_xy_shift: true
+  use_covs_shift: true
+  original_res_mask: true
+  img_size: 128
+  bg_feature_method: zero
+  module_lr: null
+  nonbase_layers:
+    backbone:
+      lr: 5.0e-06
+latent2blob:
+  hparams:
+    hidden_dim: 128
+    num_subblobs: 5
